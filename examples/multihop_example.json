@@ -1,0 +1,33 @@
+{
+  "query": "What is the population of the capital of Canada?",
+  "transcript": [
+    {
+      "role": "user",
+      "content": "What is the population of the capital of Canada?"
+    },
+    {
+      "role": "assistant",
+      "content": "The capital of Canada is Ottawa. I should search Ottawa population.",
+      "tool_calls": [
+        {
+          "id": "call_3",
+          "type": "function",
+          "function": {
+            "name": "search",
+            "arguments": "{\"query\": \"Ottawa population\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "search",
+      "tool_call_id": "call_3",
+      "content": "Ottawa metro population is ~1,000,000 (approx.)."
+    },
+    {
+      "role": "assistant",
+      "content": "Ottawa metro population is ~1,000,000 (approx.)."
+    }
+  ]
+}

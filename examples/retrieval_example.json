@@ -1,1 +1,33 @@
-
+{
+  "query": "What is ReAct in language models?",
+  "transcript": [
+    {
+      "role": "user",
+      "content": "What is ReAct in language models?"
+    },
+    {
+      "role": "assistant",
+      "content": "I should search the KB for ReAct.",
+      "tool_calls": [
+        {
+          "id": "call_2",
+          "type": "function",
+          "function": {
+            "name": "search",
+            "arguments": "{\"query\": \"ReAct\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "search",
+      "tool_call_id": "call_2",
+      "content": "ReAct combines reasoning traces with tool use in a loop (Yao et al., 2022)."
+    },
+    {
+      "role": "assistant",
+      "content": "ReAct combines reasoning traces with tool use in a loop (Yao et al., 2022)."
+    }
+  ]
+}
